@@ -1,3 +1,3 @@
 # pipex
 
-non fonctionnele pour l'instant
+non fonctionnel pour l'instant
