@@ -6,7 +6,7 @@
 /*   By: mpendilh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:34:49 by mpendilh          #+#    #+#             */
-/*   Updated: 2024/11/17 10:31:47 by mpendilh         ###   ########.fr       */
+/*   Updated: 2024/11/19 17:58:41 by mpendilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PIPEX_H
@@ -15,7 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include <stdio.h>
+# include <stdbool.h>
 # include <sys/wait.h>
 # include "libft/libft.h"
 

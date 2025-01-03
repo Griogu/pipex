@@ -6,14 +6,14 @@
 /*   By: mpendilh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 13:53:10 by mpendilh          #+#    #+#             */
-/*   Updated: 2024/11/17 10:36:23 by mpendilh         ###   ########.fr       */
+/*   Updated: 2024/11/29 11:50:47 by mpendilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "pipex.h"
 
 void	open_files(t_vars *vars, char **av)
 {
-	vars->fd_in = open(av[1], O_WRONLY);
+	vars->fd_in = open(av[1], O_RDONLY);
 	if (vars->fd_in == -1)
 		error_management("ERROR : Infile can't be open.\n");
 	vars->fd_out = open(av[4], O_CREAT | O_WRONLY | O_TRUNC, 0777);

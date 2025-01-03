@@ -6,7 +6,7 @@
 #    By: mpendilh <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 16:45:26 by mpendilh          #+#    #+#              #
-#    Updated: 2024/11/16 10:12:56 by mpendilh         ###   ########.fr        #
+#    Updated: 2024/11/19 14:19:23 by mpendilh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 CFLAGS = -Wall -Werror -Wextra
@@ -47,7 +47,8 @@ PRINTF_OBJ = $(PRINTF_PATH)/ft_hexa.o \
 		 	$(PRINTF_PATH)/ft_putstr.o
 
 GNL_PATH = get_next_line
-GNL = $(GNL_PATH)/gnl.c
+GNL_OBJ = $(GNL_PATH)/gnl.c \
+	  $(GNL_PATH)/gnl_utils.c
 
 SRCS = 		ft_atoi.c \
 			ft_bzero.c \
@@ -104,7 +105,7 @@ all: $(NAME)
 $(NAME): $(OBJS) 
 	@make --no-print-directory -C $(PRINTF_PATH)
 	@make --no-print-directory -C $(GNL_PATH)
-	@ar -rc $(NAME) $(OBJS) $(PRINTF_OBJ) $(GNL)
+	@ar -rc $(NAME) $(OBJS) $(PRINTF_OBJ) $(GNL_OBJ)
 	@echo -n $(GREEN)
 	@echo ">>>   Libft is compiled ✅  <<<"
 	@echo -n $(DEFAULT)
